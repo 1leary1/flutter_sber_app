@@ -66,12 +66,10 @@ class SberCard extends StatelessWidget {
                     children: [
                       SizedBox(
                         width: 184,
-                        height: 18,
                         child: Text(date, style: TextStyles.infoBlackStyle),
                       ),
                       SizedBox(
                         width: 184,
-                        height: 18,
                         child: Text(costs, style: TextStyles.infoStyle),
                       )
                     ],

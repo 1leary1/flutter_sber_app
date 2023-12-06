@@ -19,6 +19,10 @@ flutter:
   uses-material-design: true
   assets:
     - assets/img/sber_prime.png
+    - assets/img/percent.png
+    - assets/img/arrows_forward_back.png
+    - assets/img/speedometer.png
+    - assets/img/arrow_right.png
 
   fonts:
     - family: SF Pro Text
