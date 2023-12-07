@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'color_select.dart';
-import 'text_styles.dart';
+import '../resources/color_select.dart';
+import '../resources/text_styles.dart';
 
 // ignore: must_be_immutable
 class SberCard extends StatelessWidget {
@@ -66,12 +66,10 @@ class SberCard extends StatelessWidget {
                     children: [
                       SizedBox(
                         width: 184,
-                        height: 18,
                         child: Text(date, style: TextStyles.infoBlackStyle),
                       ),
                       SizedBox(
                         width: 184,
-                        height: 18,
                         child: Text(costs, style: TextStyles.infoStyle),
                       )
                     ],

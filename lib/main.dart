@@ -1,48 +1,37 @@
 import 'package:flutter/material.dart';
-import 'package:sber_app2/profile_screen.dart';
-import 'color_select.dart';
-import 'text_styles.dart';
+import 'package:sber_app2/resources/res_lists.dart';
+import 'package:sber_app2/screens/profile_screen.dart';
+import 'package:sber_app2/screens/settings_screen.dart';
+import 'package:sber_app2/widgets/my_sliver_appbar_widget.dart';
 
 void main() {
   runApp(const MainApp());
 }
 
-List<String> titles = <String>[
-  'Профиль',
-  'Настройки',
-];
+
 
 class MainApp extends StatelessWidget {
   const MainApp({super.key});
 
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: DefaultTabController(
-        length: titles.length,
-        child: Scaffold(
-          appBar: AppBar(
-            backgroundColor: Colors.white,
-            bottom: const TabBar(
-              indicatorColor: ColorSelect.mainGreen,
-              tabs: [
-                Tab(child: Text('Профиль',
-                  style: TextStyles.tabsStyle,)),
-                Tab(child: Text('Настройки',
-                  style: TextStyles.tabsStyle,)),
+      home: Scaffold(
+        body: DefaultTabController(
+          length: ResourcesLists.titles.length,
+          child: NestedScrollView(
+            headerSliverBuilder: (context, innerBoxIsScrolled) {
+              return <Widget>[const MySliverAppbar()];
+            },
+            body: const TabBarView(
+              children: [
+                ProfileScreen(),
+                SettingsScreen()
               ],
             ),
-          ),
-          body: const TabBarView(
-            children: [
-              ProfileScreen(),
-              Icon(Icons.directions_transit),
-            ],
           ),
         ),
       ),
     );
   }
 }
-
