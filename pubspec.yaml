@@ -23,6 +23,8 @@ flutter:
     - assets/img/arrows_forward_back.png
     - assets/img/speedometer.png
     - assets/img/arrow_right.png
+    - assets/img/percent_fill.png
+    - assets/img/user.png
 
   fonts:
     - family: SF Pro Text

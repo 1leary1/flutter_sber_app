@@ -40,4 +40,12 @@ class TextStyles {
     fontWeight: FontWeight.w500,
     letterSpacing: -0.41,
   );
+
+  static const TextStyle userNameStyle = TextStyle(
+    color: Colors.black,
+    fontSize: 24,
+    fontFamily: 'SF Pro Display',
+    fontWeight: FontWeight.w700,
+    height: 0.06,
+  );
 }

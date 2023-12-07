@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'color_select.dart';
-import 'text_styles.dart';
+import '../color_select.dart';
+import '../text_styles.dart';
 
 // ignore: must_be_immutable
 class SberCard extends StatelessWidget {
