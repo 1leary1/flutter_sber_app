@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../text_styles.dart';
+import '../resources/text_styles.dart';
 
 // ignore: must_be_immutable
 class InfoBlock extends StatelessWidget {

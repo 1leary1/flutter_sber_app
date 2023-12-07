@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sber_app2/color_select.dart';
-import 'package:sber_app2/text_styles.dart';
+import 'package:sber_app2/resources/color_select.dart';
+import 'package:sber_app2/resources/text_styles.dart';
 
 // ignore: must_be_immutable
 class Option extends StatelessWidget {

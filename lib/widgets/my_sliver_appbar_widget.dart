@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:sber_app2/color_select.dart';
-import 'package:sber_app2/image_select.dart';
-import 'package:sber_app2/text_styles.dart';
+import 'package:sber_app2/resources/color_select.dart';
+import 'package:sber_app2/resources/image_select.dart';
+import 'package:sber_app2/resources/text_styles.dart';
 
 class MySliverAppbar extends StatelessWidget {
   const MySliverAppbar({super.key});

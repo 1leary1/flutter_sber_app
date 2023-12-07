@@ -48,4 +48,12 @@ class TextStyles {
     fontWeight: FontWeight.w700,
     height: 0.06,
   );
+
+  static const TextStyle chipStyle = TextStyle(
+    color: Colors.black,
+    fontSize: 14,
+    fontFamily: 'SF Pro Text',
+    fontWeight: FontWeight.w500,
+    letterSpacing: -0.41,
+  );
 }
