@@ -15,7 +15,7 @@ class ResourcesLists {
         'На платежи и переводы'),
     Option(ImageSelect.arrowForwardBackImg, 'Переводы без комиссии',
         'Показать остаток в этом месяце'),
-    Option(ImageSelect.percentImg, 'Информация о тарифах и лимитах', ''),
+    Option(ImageSelect.percentImg, 'Информация о тарифах\nи лимитах', ''),
   ];
 
   static final List<String> chipsText = <String>[

@@ -12,40 +12,52 @@ class Option extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-        height: 64,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Image(image: mainImg, width: 36, height: 36),
-            const SizedBox(
-              width: 12,
-            ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+    return InkWell(
+        onTap: () {},
+        child: SizedBox(
+            height: 64,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                SizedBox(
-                  width: 263,
-                  child: Text(optionName, style: TextStyles.infoBlackStyle),
+                Image(image: mainImg, width: 36, height: 36),
+                const SizedBox(
+                  width: 12,
                 ),
-                SizedBox(
-                  width: 263,
-                  child: Text(optionDescription, style: TextStyles.infoStyle),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    SizedBox(
+                      width: 263,
+                      child: Text(optionName, style: TextStyles.infoBlackStyle),
+                    ),
+                    SizedBox(
+                      width: 263,
+                      child: Text(
+                        optionDescription,
+                        style: TextStyle(
+                          color: Colors.black.withOpacity(0.550000011920929),
+                          fontSize: optionDescription != "" ? 14 : 0,
+                          fontFamily: 'SF Pro Text',
+                          fontWeight: FontWeight.w500,
+                          letterSpacing: -0.41,
+                          //необходимый костыль
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+                const Spacer(),
+                const Icon(
+                  color: ColorSelect.iconArrowColor,
+                  size: 24,
+                  Icons.keyboard_arrow_right_rounded,
+                ),
+                const SizedBox(
+                  width: 8,
                 )
               ],
-            ),
-            const Spacer(),
-            const Icon(
-              color: ColorSelect.iconArrowColor,
-              size: 24,
-              Icons.keyboard_arrow_right_rounded,
-            ),
-            const SizedBox(
-              width: 8,
-            )
-          ],
-        ));
+            )));
   }
 }
