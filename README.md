@@ -5,6 +5,7 @@
 
 Screenshots:
 
-<img src="assets/screenshots/scr2.png" width="170" height="300">
-<img src="assets/screenshots/scr1.png" width="170" height="300">
-<img src="assets/screenshots/scr3.png" width="170" height="300">
+
+<img src="assets/screenshots/scr2.png" width="170" height="320">
+<img src="assets/screenshots/scr1.png" width="170" height="320">
+<img src="assets/screenshots/scr3.png" width="170" height="320">
