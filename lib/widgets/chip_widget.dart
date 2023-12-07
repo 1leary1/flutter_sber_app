@@ -7,6 +7,7 @@ class MyChip extends StatefulWidget {
   const MyChip({super.key, required this.label});
 
   @override
+  // ignore: no_logic_in_create_state
   State<MyChip> createState() => _MyChipState(text: label);
 }
 
