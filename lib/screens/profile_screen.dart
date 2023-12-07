@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sber_app2/widgets/card_view.dart';
 import 'package:sber_app2/image_select.dart';
+import 'package:sber_app2/widgets/chips_widget.dart';
 import 'package:sber_app2/widgets/info_block_view.dart';
 import 'package:sber_app2/widgets/options_view.dart';
 
@@ -72,6 +73,7 @@ class ProfileScreen extends StatelessWidget {
           const SizedBox(height: 46),
           InfoBlock('Интересы',
               'Мы подбираем истории и предложения по темам, которые вам нравятся'),
+          const ActionChoiceExample()
         ],
       ),
     );

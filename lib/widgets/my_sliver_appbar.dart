@@ -9,9 +9,11 @@ class MySliverAppbar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SliverAppBar(
-      backgroundColor: Color.fromARGB(0, 0, 0, 0),
-      pinned: true,
-      floating: false,
+      backgroundColor: const Color.fromARGB(0, 0, 0, 0),
+      elevation: 2,
+      pinned: false,
+      floating: true,
+      stretch:  true,
       expandedHeight: 306,
       actions: [
         IconButton(
@@ -20,7 +22,6 @@ class MySliverAppbar extends StatelessWidget {
           onPressed: () {},
         ),
       ],
-      elevation: 0,
       leading: IconButton(
         icon: const Icon(Icons.close),
         color: ColorSelect.mainGreen,
