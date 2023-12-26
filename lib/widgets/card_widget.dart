@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:sber_app2/models/card_model.dart';
 import '../resources/color_select.dart';
 import '../resources/text_styles.dart';
 
 // ignore: must_be_immutable
 class SberCard extends StatelessWidget {
-  AssetImage icon;
-  String header;
-  String date;
-  String costs;
+  CardModel model;
 
-  SberCard(this.icon, this.header, this.date, this.costs, {super.key});
+  SberCard({super.key, required this.model});
 
   @override
   Widget build(BuildContext context) {
@@ -49,9 +47,9 @@ class SberCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const SizedBox(width: 16),
-                Image(image: icon, width: 36, height: 36),
+                Image(image: model.icon, width: 36, height: 36),
                 const SizedBox(width: 12),
-                Text(header, style: TextStyles.cardHeaderStyle)
+                Text(model.header, style: TextStyles.cardHeaderStyle)
               ],
             ),
           ),
@@ -66,11 +64,12 @@ class SberCard extends StatelessWidget {
                     children: [
                       SizedBox(
                         width: 184,
-                        child: Text(date, style: TextStyles.infoBlackStyle),
+                        child:
+                            Text(model.date, style: TextStyles.infoBlackStyle),
                       ),
                       SizedBox(
                         width: 184,
-                        child: Text(costs, style: TextStyles.infoStyle),
+                        child: Text(model.costs, style: TextStyles.infoStyle),
                       )
                     ],
                   )
