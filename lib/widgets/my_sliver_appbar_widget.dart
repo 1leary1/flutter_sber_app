@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sber_app2/resources/color_select.dart';
 import 'package:sber_app2/resources/image_select.dart';
+import 'package:sber_app2/resources/text_select.dart';
 import 'package:sber_app2/resources/text_styles.dart';
 
 class MySliverAppbar extends StatelessWidget {
@@ -13,7 +14,7 @@ class MySliverAppbar extends StatelessWidget {
       elevation: 2,
       pinned: false,
       floating: true,
-      stretch:  true,
+      stretch: true,
       expandedHeight: 306,
       actions: [
         IconButton(
@@ -46,7 +47,7 @@ class MySliverAppbar extends StatelessWidget {
                 child: const Image(image: ImageSelect.user),
               ),
               const Text(
-                'Екатерина',
+                TextSelect.username,
                 style: TextStyles.userNameStyle,
               ),
             ],
@@ -58,12 +59,12 @@ class MySliverAppbar extends StatelessWidget {
         tabs: [
           Tab(
               child: Text(
-            'Профиль',
+            TextSelect.titleProfile,
             style: TextStyles.tabsStyle,
           )),
           Tab(
               child: Text(
-            'Настройки',
+            TextSelect.titleSettings,
             style: TextStyles.tabsStyle,
           )),
         ],
