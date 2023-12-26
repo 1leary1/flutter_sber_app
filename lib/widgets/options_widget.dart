@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:sber_app2/models/option_model.dart';
 import 'package:sber_app2/resources/color_select.dart';
 import 'package:sber_app2/resources/text_styles.dart';
 
 // ignore: must_be_immutable
 class Option extends StatelessWidget {
-  AssetImage mainImg;
-  String optionDescription;
-  String optionName;
+  OptionModel model;
 
-  Option(this.mainImg, this.optionName, this.optionDescription, {super.key});
+  Option({super.key, required this.model});
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +19,7 @@ class Option extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Image(image: mainImg, width: 36, height: 36),
+                Image(image: model.mainImg, width: 36, height: 36),
                 const SizedBox(
                   width: 12,
                 ),
@@ -30,15 +29,16 @@ class Option extends StatelessWidget {
                   children: [
                     SizedBox(
                       width: 263,
-                      child: Text(optionName, style: TextStyles.infoBlackStyle),
+                      child: Text(model.optionName,
+                          style: TextStyles.infoBlackStyle),
                     ),
                     SizedBox(
                       width: 263,
                       child: Text(
-                        optionDescription,
+                        model.optionDescription,
                         style: TextStyle(
                           color: Colors.black.withOpacity(0.550000011920929),
-                          fontSize: optionDescription != "" ? 14 : 0,
+                          fontSize: model.optionDescription != "" ? 14 : 0,
                           fontFamily: 'SF Pro Text',
                           fontWeight: FontWeight.w500,
                           letterSpacing: -0.41,

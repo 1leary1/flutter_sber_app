@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sber_app2/resources/res_lists.dart';
+import 'package:sber_app2/resources/text_select.dart';
 import 'package:sber_app2/widgets/chip_widget.dart';
-import 'package:sber_app2/widgets/info_block_widget.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -16,8 +15,7 @@ class ProfileScreen extends StatelessWidget {
           const SizedBox(height: 30),
 
           //cards block
-          InfoBlock('У вас подключено',
-              'Подписки, автоплатежи и сервисы на которые вы подписались'),
+          TextSelect.infoBlocks[0],
           const SizedBox(height: 30),
           SizedBox(
             height: 130,
@@ -25,9 +23,9 @@ class ProfileScreen extends StatelessWidget {
               clipBehavior: Clip.none,
               scrollDirection: Axis.horizontal,
               shrinkWrap: false,
-              itemCount: ResourcesLists.cards.length,
+              itemCount: TextSelect.cards.length,
               itemBuilder: (BuildContext context, int index) {
-                return ResourcesLists.cards[index];
+                return TextSelect.cards[index];
               },
               separatorBuilder: (BuildContext context, int index) =>
                   const SizedBox(
@@ -38,7 +36,7 @@ class ProfileScreen extends StatelessWidget {
           const SizedBox(height: 46),
 
           //options block
-          InfoBlock('Тарифы и лимиты', 'Для операций в Сбербанк Онлайн'),
+          TextSelect.infoBlocks[1],
           const SizedBox(height: 12),
           SizedBox(
             height: 200,
@@ -47,26 +45,28 @@ class ProfileScreen extends StatelessWidget {
                   clipBehavior: Clip.none,
                   shrinkWrap: true,
                   physics: const NeverScrollableScrollPhysics(),
-                  itemCount: ResourcesLists.options.length,
+                  itemCount: TextSelect.options.length,
                   itemBuilder: (BuildContext context, int index) {
-                    return ResourcesLists.options[index];
+                    return TextSelect.options[index];
                   },
                   separatorBuilder: (BuildContext context, int index) =>
-                      const Padding(padding: EdgeInsets.only(left: 48), child: Divider(),)),
+                      const Padding(
+                        padding: EdgeInsets.only(left: 48),
+                        child: Divider(),
+                      )),
             ),
           ),
           const SizedBox(height: 46),
 
           //info block of interests and chips
-          InfoBlock('Интересы',
-              'Мы подбираем истории и предложения по темам, которые вам нравятся'),
+          TextSelect.infoBlocks[2],
           const SizedBox(
             height: 16,
           ),
           Wrap(
               spacing: 8,
-              children: List.generate(
-                  ResourcesLists.chipsText.length, (index) => MyChip(label: ResourcesLists.chipsText[index]))),
+              children: List.generate(TextSelect.chipsText.length,
+                  (index) => MyChip(label: TextSelect.chipsText[index]))),
         ],
       ),
     );
